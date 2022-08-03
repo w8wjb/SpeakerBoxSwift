@@ -99,6 +99,8 @@ final class CallsViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+
 
         NotificationCenter.default.addObserver(self, selector: #selector(handleCallsChangedNotification(notification:)), name: SpeakerboxCallManager.CallsChangedNotification, object: nil)
 
@@ -107,6 +109,7 @@ final class CallsViewController: UITableViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        UIApplication.shared.endReceivingRemoteControlEvents()
 
         NotificationCenter.default.removeObserver(self, name: SpeakerboxCallManager.CallsChangedNotification, object: nil)
 
@@ -189,4 +192,33 @@ final class CallsViewController: UITableViewController {
         updateCallsDependentUI(animated: true)
     }
 
+    // MARK: - Start TSI
+    
+    func showPopup(message: String) {
+        let alertController = UIAlertController(title: "Info", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        present(alertController, animated: true)
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
+    override func accessibilityPerformMagicTap() -> Bool {
+        showPopup(message: "Accessibility: Magic Tap")
+        return true
+    }
+    
+    override func accessibilityPerformEscape() -> Bool {
+        showPopup(message: "Accessibility: Escape")
+        return true
+    }
+    
+    override func remoteControlReceived(with event: UIEvent?) {
+        if let event = event {
+            showPopup(message: "Remote control event: \(event.type)")
+        }
+    }
+    
+    // MARK: - End TSI
 }
