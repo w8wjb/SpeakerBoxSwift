@@ -349,8 +349,8 @@
 				TargetAttributes = {
 					1768B0731C7D2BEB004D401D = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = X2U387NYFT;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = R94MW7P6QY;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -359,8 +359,8 @@
 					};
 					179ADCC81CE5252000874792 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = X2U387NYFT;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = R94MW7P6QY;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -369,6 +369,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -520,7 +521,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -560,7 +561,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -572,8 +573,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tarun Chaudhary (CQ2EJ89YBN)";
-				DEVELOPMENT_TEAM = X2U387NYFT;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R94MW7P6QY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -583,7 +585,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lybrate.phoenix.Lybrate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b99c6ce8-b2de-4b83-942c-b82795a452e1";
-				PROVISIONING_PROFILE_SPECIFIER = Patient_Development_22Apr;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Speakerbox/Speakerbox-Bridging-Header.h";
 			};
 			name = Debug;
@@ -594,8 +596,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tarun Chaudhary (CQ2EJ89YBN)";
-				DEVELOPMENT_TEAM = X2U387NYFT;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R94MW7P6QY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -605,7 +608,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lybrate.phoenix.Lybrate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a5da6ee3-cba2-42fa-a894-bb989d9bd687";
-				PROVISIONING_PROFILE_SPECIFIER = "patient adhoc provisioning";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Speakerbox/Speakerbox-Bridging-Header.h";
 			};
 			name = Release;
@@ -614,14 +617,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = X2U387NYFT;
+				DEVELOPMENT_TEAM = R94MW7P6QY;
 				INFOPLIST_FILE = IntentsExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lybrate.phoenix.Lybrate.NotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "dd08cd4a-6baa-42c1-ad2b-f55faedf58cb";
-				PROVISIONING_PROFILE_SPECIFIER = DevelopmentPatientNotificationService;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 			};
@@ -631,15 +636,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = X2U387NYFT;
+				DEVELOPMENT_TEAM = R94MW7P6QY;
 				INFOPLIST_FILE = IntentsExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lybrate.phoenix.Lybrate.NotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "2b183490-c919-4141-93de-4058eef6a545";
-				PROVISIONING_PROFILE_SPECIFIER = AdhocPatientNotificationService;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CallKit
+import AVFAudio
 
 final class ProviderDelegate: NSObject, CXProviderDelegate {
 
@@ -36,7 +37,7 @@ final class ProviderDelegate: NSObject, CXProviderDelegate {
         providerConfiguration.supportedHandleTypes = [.phoneNumber]
 
         if let iconMaskImage = UIImage(named: "IconMask") {
-            providerConfiguration.iconTemplateImageData = UIImagePNGRepresentation(iconMaskImage)
+            providerConfiguration.iconTemplateImageData = iconMaskImage.pngData()
         }
 
         providerConfiguration.ringtoneSound = "Ringtone.caf"

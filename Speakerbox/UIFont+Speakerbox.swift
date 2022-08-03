@@ -13,9 +13,9 @@ extension UIFont {
 
     var addingMonospacedNumberAttributes: UIFont {
         let attributes = [
-            UIFontDescriptorFeatureSettingsAttribute: [[
-                UIFontFeatureTypeIdentifierKey: kNumberSpacingType,
-                UIFontFeatureSelectorIdentifierKey: kMonospacedNumbersSelector
+            UIFontDescriptor.AttributeName.featureSettings: [[
+                UIFontDescriptor.FeatureKey.featureIdentifier: kNumberSpacingType,
+                UIFontDescriptor.FeatureKey.typeIdentifier: kMonospacedNumbersSelector
             ]]
         ]
         let fontDescriptorWithAttributes = fontDescriptor.addingAttributes(attributes)

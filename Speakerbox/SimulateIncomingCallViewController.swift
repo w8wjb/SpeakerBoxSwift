@@ -85,7 +85,7 @@ class SimulateIncomingCallViewController: UIViewController {
 
     // MARK: Observers
 
-    func textFieldDidChange(textField: UITextField?) {
+    @objc func textFieldDidChange(textField: UITextField?) {
         updateDialButton()
     }
 

@@ -10,7 +10,7 @@ import Intents
 
 class IntentHandler: INExtension, INStartAudioCallIntentHandling {
 
-    public func handle(startAudioCall intent: INStartAudioCallIntent, completion: @escaping (INStartAudioCallIntentResponse) -> Swift.Void)
+    public func handle(intent: INStartAudioCallIntent, completion: @escaping (INStartAudioCallIntentResponse) -> Swift.Void)
     {
     
     

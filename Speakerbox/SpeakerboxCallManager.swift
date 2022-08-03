@@ -60,7 +60,7 @@ final class SpeakerboxCallManager: NSObject {
     private(set) var calls = [SpeakerboxCall]()
 
     func callWithUUID(uuid: UUID) -> SpeakerboxCall? {
-        guard let index = calls.index(where: { $0.uuid == uuid }) else {
+        guard let index = calls.firstIndex(where: { $0.uuid == uuid }) else {
             return nil
         }
         return calls[index]

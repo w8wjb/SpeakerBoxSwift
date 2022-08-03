@@ -68,7 +68,7 @@ final class CallsViewController: UITableViewController {
         }
     }
 
-    func callDurationTimerFired() {
+    @objc func callDurationTimerFired() {
         updateCallDurationForVisibleCells()
     }
 
@@ -171,7 +171,7 @@ final class CallsViewController: UITableViewController {
         return NSLocalizedString("TABLE_CELL_EDIT_ACTION_END", comment: "End button in call summary table view cell")
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let call = call(at: indexPath) {
                 print("Requesting to end call: \(call)")
@@ -184,7 +184,7 @@ final class CallsViewController: UITableViewController {
 
     // MARK: CXCallObserverDelegate
 
-    func handleCallsChangedNotification(notification: NSNotification) {
+    @objc func handleCallsChangedNotification(notification: NSNotification) {
         tableView.reloadData()
         updateCallsDependentUI(animated: true)
     }
